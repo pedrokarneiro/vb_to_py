@@ -30,11 +30,11 @@ def Len(s):
     # E você pode escolher a caixa da primeira letra da função. <:-D
     return len(s)
 
-def InStr(start, s, substring):
+def InStr(s, substring, start=0):
     # Retorna a posição da primeira ocorrência de substring em string,
     # começando a busca a partir da posição 'start'.
     # Retorna 0 se não encontrar.
-    return s.find(substring, start - 1) + 1
+    return s.find(substring, start)
 
 def Trim(s):
     # Remove espaços em branco do início e do final da string s.
@@ -214,5 +214,5 @@ def PascalCase(s):
 
 if __name__ == '__main__':
     texto = "Exemplo de Texto"
-    resultado = left(texto, 4)
+    resultado = Left(texto, 4)
     print(resultado)  # Saída: "Exem"
